@@ -18,11 +18,11 @@ public class Main {
 
     private static void task4() {
         System.out.println("Задача 4");
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length-1; i >= 0; i--) {
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
-            }
         }
+    }
 
     private static void task3() {
         int[] arr = generateRandomArray();
@@ -33,26 +33,25 @@ public class Main {
             sum += arr[i];
         }
         averages = sum / arr.length;
-        System.out.println("Средняя сумма трат за месяц составила " +averages+" рублей");
+        System.out.println("Средняя сумма трат за месяц составила " + averages + " рублей");
 
     }
 
     private static void task2() {
         int[] arr = generateRandomArray();
-        System.out.println("Зфдфча 2");
-        int maxExpenses = -1;
-        int minExpenses = 200_000;
-        for (int i = 0; i < arr.length; i++) {
+        System.out.println("Задача 2");
+        int maxExpenses = arr[0];
+        int minExpenses = arr[0];
+        for (int i = 1; i < arr.length; i++) {
             if (arr[i] > maxExpenses) {
                 maxExpenses = arr[i];
             }
-        }
-        System.out.println("Максимальная сумма трат за день составила " + maxExpenses + " рублей");
-        for (int i = 0; i < arr.length; i++) {
             if (arr[i] < minExpenses) {
                 minExpenses = arr[i];
             }
+
         }
+        System.out.println("Максимальная сумма трат за день составила " + maxExpenses + " рублей");
         System.out.println("Минимальная сумма трат за день составила " + minExpenses + " рублей");
     }
 
@@ -60,10 +59,12 @@ public class Main {
     private static void task1() {
         int[] arr = generateRandomArray();
         System.out.println("Задача 1");
+        int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            System.out.println("Сумма трат за месяц составила " + arr[i] + " рублей");
+            sum += arr[i];
 
         }
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
 
 
     }
